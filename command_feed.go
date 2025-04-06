@@ -10,7 +10,7 @@ import (
 	"github.com/hulkbusterks/BlogAggregator/internal/database"
 )
 
-func handlerAddFeed(s *state, cmd Command) error {
+func handlerAddFeed(s *state, cmd Command, user database.User) error {
 	if len(cmd.args) != 2 {
 		return errors.New("too much parameters")
 	}
